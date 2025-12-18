@@ -1,0 +1,269 @@
+/* --- Stili Generali e Reset --- */
+
+/* Imposta gli stili di base per l'intero documento */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Stack di caratteri moderno e cross-platform */
+    margin: 0; /* Rimuove il margine predefinito */
+    padding: 0; /* Rimuove il padding predefinito */
+    background-color: #ffffff; /* Sfondo bianco */
+    color: #333; /* Colore del testo principale scuro per leggibilità */
+    line-height: 1.6; /* Altezza di linea per una migliore leggibilità del testo */
+}
+
+/* Reset universale del box-sizing per un modello di layout più prevedibile */
+* {
+    box-sizing: border-box; /* Padding e border non aumentano la dimensione totale dell'elemento */
+}
+
+/* Contenitore principale per centrare il contenuto e limitarne la larghezza */
+.container {
+    width: 90%; /* Occupa il 90% della larghezza disponibile */
+    max-width: 1100px; /* Ma non più di 1100px */
+    margin: 0 auto; /* Centra orizzontalmente il contenitore */
+    padding: 20px 0; /* Aggiunge spazio sopra e sotto */
+}
+
+/* Stili per i titoli */
+h1, h2, h3 {
+    color: #000000; /* Colore nero per i titoli per un forte contrasto */
+}
+
+/* Stili per i link */
+a {
+    color: #007BFF; /* Colore blu standard per i link */
+    text-decoration: none; /* Rimuove la sottolineatura predefinita */
+}
+
+/* Stile per i link al passaggio del mouse */
+a:hover {
+    text-decoration: underline; /* Aggiunge una sottolineatura al passaggio del mouse per feedback visivo */
+}
+
+/* Stili per le immagini, per renderle responsive */
+img {
+    max-width: 100%; /* L'immagine non supererà mai la larghezza del suo contenitore */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    display: block; /* Rimuove lo spazio extra sotto l'immagine */
+}
+
+/* --- Intestazione (Header) --- */
+
+/* Stile per l'intestazione principale */
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #eaeaea; /* Bordo sottile per separare l'header dal resto */
+    padding: 1rem 0;
+    position: sticky; /* L'header rimane "incollato" in alto durante lo scorrimento */
+    top: 0; /* Si attacca al bordo superiore della finestra */
+    z-index: 1000; /* Assicura che l'header sia sopra gli altri contenuti */
+}
+
+/* Usa Flexbox per allineare il titolo a sinistra e la navigazione a destra */
+header .container {
+    display: flex;
+    justify-content: space-between; /* Spazio massimo tra gli elementi figli */
+    align-items: center; /* Allinea verticalmente gli elementi al centro */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* Stili per la lista di navigazione */
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Rimuove i punti elenco */
+    display: flex; /* Allinea gli elementi della lista in orizzontale */
+}
+
+header nav ul li {
+    margin-left: 20px; /* Aggiunge spazio tra le voci del menu */
+}
+
+header nav a {
+    font-weight: 500;
+    color: #333;
+}
+
+/* --- Sezioni --- */
+
+/* Stile generale per tutte le sezioni principali */
+section {
+    padding: 60px 0; /* Spaziatura verticale per separare le sezioni */
+}
+
+/* Alterna il colore di sfondo delle sezioni per una migliore separazione visiva */
+section:nth-of-type(even) {
+    background-color: #f9f9f9; /* Sfondo grigio chiaro per le sezioni pari */
+}
+
+/* --- Introduzione (Hero) --- */
+#hero {
+    text-align: center; /* Centra il testo */
+    padding: 80px 0;
+    background-color: #007BFF; /* Sfondo blu per un forte impatto visivo */
+    color: #ffffff; /* Testo bianco per contrasto */
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffffff; /* Assicura che il titolo sia bianco */
+}
+
+#hero p {
+    font-size: 1.2rem;
+}
+
+/* --- Informazioni (About) --- */
+#about h2 {
+    text-align: center;
+    margin-bottom: 40px; /* Spazio sotto il titolo della sezione */
+}
+
+/* --- Progetti (Projects) --- */
+#projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Usa CSS Grid per creare una galleria di progetti responsive */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crea colonne flessibili che si adattano alla larghezza */
+    gap: 30px; /* Spazio tra i progetti */
+}
+
+/* Stile per la card del singolo progetto */
+.project {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px; /* Angoli arrotondati */
+    overflow: hidden; /* Nasconde le parti dell'immagine che escono dai bordi arrotondati */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Ombra leggera per dare profondità */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione fluida per l'effetto hover */
+}
+
+/* Effetto al passaggio del mouse: solleva leggermente la card e aumenta l'ombra */
+.project:hover {
+    transform: translateY(-5px); /* Sposta la card verso l'alto */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Ombra più pronunciata */
+}
+
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Assicura che l'immagine copra l'area designata senza distorcersi */
+}
+
+.project h3, .project p {
+    padding: 0 20px; /* Spaziatura interna per il testo */
+}
+
+.project h3 {
+    margin-top: 20px;
+}
+
+.project p {
+    padding-bottom: 20px;
+}
+
+/* --- Contatti (Contact) --- */
+#contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Stile per il modulo di contatto */
+#contact form {
+    max-width: 600px; /* Limita la larghezza del modulo per una migliore leggibilità */
+    margin: 0 auto 40px auto; /* Centra il modulo e aggiunge spazio sotto */
+    display: flex;
+    flex-direction: column; /* Impila i campi del modulo verticalmente */
+}
+
+/* Stile per i campi di input e textarea */
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit; /* Eredita il font dal body */
+}
+
+/* Stile per il pulsante di invio */
+#contact button {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Cambia il cursore in un puntatore */
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Transizione per il cambio di colore */
+}
+
+#contact button:hover {
+    background-color: #0056b3; /* Colore più scuro al passaggio del mouse */
+}
+
+/* Stile per le icone dei social */
+.social-icons {
+    text-align: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px; /* Centra verticalmente l'icona (se è un carattere) */
+    border-radius: 50%; /* Rende il contenitore circolare */
+    background-color: #333;
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.social-icons a:hover {
+    background-color: #007BFF;
+}
+
+/* --- Piè di pagina (Footer) --- */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* --- Media Queries per Responsive Design --- */
+
+/* Stili per schermi più piccoli (es. tablet e smartphone) */
+@media (max-width: 768px) {
+    /* Nell'header, impila il titolo e la navigazione verticalmente */
+    header .container {
+        flex-direction: column;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        padding-top: 10px;
+    }
+
+    /* Riduci la dimensione del titolo principale nella sezione hero */
+    #hero h2 {
+        font-size: 2rem;
+    }
+}
