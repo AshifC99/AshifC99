@@ -1,3 +1,5 @@
+# AshifC99.github.io
+
 # 💫 About Me:
 
 🌱 Weaving dreams into the fabric of reality
@@ -12,9 +14,9 @@
 
 # 📊 GitHub Stats:
 
-![](https://github-readme-stats.vercel.app/api?username=Ashif-Chowdhury&theme=calm_pink&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=Ashif-Chowdhury&theme=calm_pink&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Ashif-Chowdhury&theme=calm_pink&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+![](https://github-readme-stats.vercel.app/api?username=AshifC99&theme=calm_pink&hide_border=false&include_all_commits=true&count_private=true)<br/>
+![](https://nirzak-streak-stats.vercel.app/?user=AshifC99&theme=calm_pink&hide_border=false)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=AshifC99&theme=calm_pink&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
 ### ✍️ Random Dev Quote
 
@@ -22,7 +24,7 @@
 
 ---
 
-[![](https://visitcount.itsvg.in/api?id=Ashif-Chowdhury&icon=4&color=1)](https://visitcount.itsvg.in)
+[![](https://visitcount.itsvg.in/api?id=AshifC99&icon=4&color=1)](https://visitcount.itsvg.in)
 
 ## 💰 You can help me by Donating
 
